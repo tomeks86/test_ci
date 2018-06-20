@@ -20,4 +20,18 @@ public class MainTest {
     public void shouldAddNumbers(int a, int b, int sum) {
         Assert.assertEquals(main.add(a, b), sum);
     }
+
+    @DataProvider
+    private static Object[][] dataForSubtraction() {
+        return new Object[][]{
+                {1, 1, 0},
+                {2, 5, -3},
+                {2, -5, 8},
+        };
+    }
+
+    @Test(dataProvider = "dataForSubtraction")
+    public void shouldSubtractNumbers(int a, int b, int difference) {
+        Assert.assertEquals(main.subtract(a, b), difference);
+    }
 }
