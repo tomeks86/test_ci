@@ -12,7 +12,7 @@ public class MainTest {
 
     @Test
     public void passingTest2() {
-        Assert.assertTrue(true , "this is supposed to fail");
+        Assert.assertEquals(1, 1);
     }
 
 }
