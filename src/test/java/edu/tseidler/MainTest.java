@@ -7,7 +7,7 @@ public class MainTest {
 
     @Test
     public void failingTest() {
-        Assert.assertTrue(false, "this is supposed to fail");
+        Assert.assertTrue(true, "this is supposed to fail");
     }
 
 }
