@@ -20,6 +20,11 @@ public class MainTest {
         Assert.assertEquals(2, 2);
     }
 
+    @Test
+    public void passingTest4() {
+        Assert.assertEquals(2, 2);
+    }
+
 //    @Test
 //    public void failingTest() {
 //        Assert.assertEquals(3, 5);
