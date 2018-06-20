@@ -6,8 +6,13 @@ import org.testng.annotations.Test;
 public class MainTest {
 
     @Test
-    public void failingTest() {
+    public void passingTest() {
         Assert.assertTrue(true, "this is supposed to fail");
+    }
+
+    @Test
+    public void failingTest() {
+        Assert.assertTrue(false , "this is supposed to fail");
     }
 
 }
