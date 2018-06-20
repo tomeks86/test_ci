@@ -26,7 +26,7 @@ public class MainTest {
         return new Object[][]{
                 {1, 1, 0},
                 {2, 5, -3},
-                {2, -5, 8},
+                {2, -5, 7},
         };
     }
 
