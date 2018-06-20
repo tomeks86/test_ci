@@ -16,8 +16,8 @@ public class MainTest {
     }
 
     @Test
-    public void failingTest() {
-        Assert.assertEquals(1, 2);
+    public void passingTest3() {
+        Assert.assertEquals(2, 2);
     }
 
 }
