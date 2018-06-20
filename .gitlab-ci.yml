@@ -4,6 +4,10 @@ variables:
 
 image: maven:latest
 
+cache:
+  paths:
+    - .m2/
+
 stages:
   - test
   - build
