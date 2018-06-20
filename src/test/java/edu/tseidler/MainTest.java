@@ -40,7 +40,7 @@ public class MainTest {
         return new Object[][]{
                 {1, 1, 1},
                 {2, 5, 10},
-                {2, -5, -10},
+                {2, -5, -11},
         };
     }
 
