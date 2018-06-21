@@ -54,7 +54,7 @@ public class MainTest {
         return new Object[][]{
                 {1, 1, 1},
                 {2, 5, 0},
-                {12, -5, -2},
+                {12, -5, -1},
         };
     }
 
