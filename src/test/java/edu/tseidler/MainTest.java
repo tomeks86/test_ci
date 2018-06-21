@@ -34,4 +34,33 @@ public class MainTest {
     public void shouldSubtractNumbers(int a, int b, int difference) {
         Assert.assertEquals(main.subtract(a, b), difference);
     }
+
+    @DataProvider
+    private static Object[][] dataForMultiplication() {
+        return new Object[][]{
+                {1, 1, 1},
+                {2, 5, 10},
+                {2, -5, -10},
+        };
+    }
+
+    @Test(dataProvider = "dataForMultiplication")
+    public void shouldMultiplyNumbers(int a, int b, int product) {
+        Assert.assertEquals(main.multiply(a, b), product);
+    }
+
+    @DataProvider
+    private static Object[][] dataForDivision() {
+        return new Object[][]{
+                {1, 1, 1},
+                {2, 5, 0},
+                {12, -5, -2},
+        };
+    }
+
+    @Test(dataProvider = "dataForDivision")
+    public void shouldDivideNumbers(int a, int b, int ratio) {
+        Assert.assertEquals(main.divide(a, b), ratio);
+        }
+
 }

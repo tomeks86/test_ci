@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
         <testng.version>6.14.3</testng.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
@@ -38,6 +38,58 @@
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.1</version>
+                <configuration>
+                    <excludes>
+                        <exclude>main/**/*.class</exclude>
+
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+
+
+                    <execution>
+                        <id>default-check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <dataFile>${project.build.directory}/jacoco.exec</dataFile>
+                            <rules>
+                                <rule>
+                                    <limits>
+                                        <limit>
+                                            <counter>INSTRUCTION</counter>
+                                            <minimum>0.90</minimum>
+                                        </limit>
+                                        <limit>
+                                            <counter>METHOD</counter>
+                                            <minimum>0.80</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+
             </plugin>
         </plugins>
     </build>
